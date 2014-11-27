@@ -1,0 +1,27 @@
+{
+  "name": "WebSite4",
+  "version": "0.0.0",
+  "authors": [
+    "acambas <aleksandarcambas@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.0",
+    "font-awsome": "~4.2.0",
+    "jquery": "~2.1.1",
+    "moment": "~2.8.4",
+    "angular": "~1.3.4",
+    "angular-animate": "~1.3.4",
+    "animate.css": "~3.2.0",
+    "angular-toastr": "~0.5.2",
+    "soundmanager": "*",
+    "angular-soundmanager2": "~0.2.3"
+  }
+}
