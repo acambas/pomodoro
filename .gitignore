@@ -1,4 +1,8 @@
 # git ignore file
 /bower_components
 /node_modules
-/build
+/App_Data
+/*.publishproj
+/Web.config
+/Web.Debug.config
+/website.publishproj

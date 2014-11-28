@@ -12,10 +12,10 @@
 
     <!-- build:css style/style.css -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
     <link href="bower_components/font-awsome/css/font-awesome.css" rel="stylesheet" />
     <link href="bower_components/animate.css/animate.css" rel="stylesheet" />
     <link href="bower_components/angular-toastr/dist/angular-toastr.css" rel="stylesheet" />
+    <link href="style/theme.css" rel="stylesheet" />
     <link href="style/main.css" rel="stylesheet" />
     <!-- endbuild -->
 
@@ -24,31 +24,44 @@
     <!-- Fixed navbar -->
     <div class="container" role="main" id="content">
 
-    
-
         <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="btn-group btn-group-lg" role="group" >
-                    <button ng-click="switchType()" type="button" class="btn btn-primary">Start pomodoro</button>
-                    <button ng-click="switchType('short')" type="button" class="btn btn-primary">Start short pause</button>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-primary animated fadeInDown">
+                    <div class="panel-heading ">
+                        <h2 class="text-center">Pomodoro</h2>
+                    </div>
+                    <div class="panel-body ">
+                        <div class="">
+                            <div class="row col-md-offset-3">
+                                <div class="">
+                                    <div class="btn-group btn-group-lg" role="group">
+                                        <button ng-click="switchType()" type="button" class="btn btn-primary">Pomodoro</button>
+                                        <button ng-click="switchType('short')" type="button" class="btn btn-primary">Short pause</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="">
+                                    <h1>{{time.format('mm:ss')}}</h1>
+                                </div>
+                            </div>
+
+                            <div class="row col-md-offset-3">
+                                <div class="">
+                                    <div ng-click="start()" class="btn btn-lg btn-success">Start</div>
+                                    <div ng-click="reset()" class="btn btn-lg btn-danger">Reset</div>
+                                    <div ng-click="pause()" class="btn btn-lg btn-warning">Pause</div>
+                                    <div ng-click="toggleMute()" class="btn btn-lg btn-default">Mute</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <h1>{{time.format('mm:ss')}}</h1>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div ng-click="start()" class="btn btn-lg btn-success">Start</div>
-                <div ng-click="reset()" class="btn btn-lg btn-danger">Reset</div>
-                <div ng-click="pause()" class="btn btn-lg btn-warning">Pause</div>
-                <div ng-click="toggleMute()" class="btn btn-lg btn-default">Mute</div>
-            </div>
-        </div>
- 
+
+
     </div> <!-- /container -->
     <!-- build:js scripts/app.js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
